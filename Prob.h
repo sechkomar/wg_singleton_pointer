@@ -21,7 +21,6 @@ public:
 
     ~Prob() {
         delete array;
-//        std::cout << "Prob::destructor" << std::endl;
     }
 
     Prob() {
