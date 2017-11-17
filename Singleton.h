@@ -29,7 +29,6 @@ public:
     }
 
     Singleton(Singleton &) = delete;
-
     void operator=(Singleton const &) = delete;
 
 };

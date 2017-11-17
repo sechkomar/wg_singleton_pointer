@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+//class for tests
+
 class Prob {
 private:
     int number;
@@ -21,12 +23,6 @@ public:
 
     ~Prob() {
         delete array;
-    }
-
-    Prob() {
-        number = -3;
-        name = "NO NAME";
-        array = nullptr;
     }
 
     void hi() {

@@ -49,7 +49,6 @@ public:
 //            std::cout << "sp::destructor for " << pointer << ": " << refs->count << " more copies left\n";
 //        }
     }
-
     T *get_object() const {
         return pointer;
     }
