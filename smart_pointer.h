@@ -29,7 +29,7 @@ private:
     ref_count *refs;
 
     void final_destructor() {
-//        std::cout << "final sp::destructor for " << pointer << std::endl;
+    std::cout << "final sp::destructor for " << pointer << std::endl;
         delete pointer;
         delete refs;
     }

@@ -1,13 +1,20 @@
 #ifndef WG_SINGLETON_SINGLETON_H
 #define WG_SINGLETON_SINGLETON_H
 
+#include <iostream>
 
 class Singleton {
 private:
 
-    Singleton() = default;;
+    Singleton() {
+        name = "i am singleton";
+    };
 
-    ~Singleton() = default;
+    ~Singleton() {
+        std::cout << "Singleton::destructor" << std::endl;
+    };
+
+    std::string name;
 
 public:
 
@@ -15,6 +22,10 @@ public:
         static Singleton singleton;
 
         return singleton;
+    }
+
+    std::string get_name() {
+        return name;
     }
 
     Singleton(Singleton &) = delete;

@@ -1,9 +1,12 @@
 #include <memory>
 #include "smart_pointer.h"
 #include "Prob.h"
+#include "Singleton.h"
 
 
 int main() {
+
+//    std::cout << Singleton::instance().get_name() << std::endl;
 
     auto *prob = new Prob(567, "ddddd");
 
@@ -15,8 +18,9 @@ int main() {
     smart_pointer<Prob> ptr2(new Prob(11, "111"));
     ptr2.get_object()->hi();
 
+    ptr2 = new Prob(13, "last prob");
 
-    ptr2 = ptr;
+    ptr2.get_object()->hi();
 
     return 0;
 }
